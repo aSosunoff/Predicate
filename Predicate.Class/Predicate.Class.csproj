@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extension\Implementation\IsCodesPredicate.cs" />
+    <Compile Include="Extension\Implementation\XmlTablePredicate.cs" />
+    <Compile Include="Extension\Interface\IIsCodesPredicate.cs" />
+    <Compile Include="Extension\Interface\IXmlTablePredicate.cs" />
+    <Compile Include="Extension\PredicatesEx.cs" />
     <Compile Include="Implementation\BetweenPredicate.cs" />
     <Compile Include="Implementation\FieldDatePredicate.cs" />
     <Compile Include="Implementation\FieldDateTruncPredicate.cs" />
