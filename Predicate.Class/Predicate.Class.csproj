@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B92581C8-0360-4831-9C34-C7B9A82893B9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Predicate</RootNamespace>
-    <AssemblyName>Predicate</AssemblyName>
+    <ProjectGuid>{0BC389AE-6CE3-4F82-87DA-A433747A2FE9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Predicate.Class</RootNamespace>
+    <AssemblyName>Predicate.Class</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,11 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Implementation\BetweenPredicate.cs" />
+    <Compile Include="Implementation\FieldDatePredicate.cs" />
+    <Compile Include="Implementation\FieldDateTruncPredicate.cs" />
+    <Compile Include="Implementation\FieldPredicate.cs" />
+    <Compile Include="Implementation\PredicateGroup.cs" />
+    <Compile Include="Implementation\PropertyPredicate.cs" />
+    <Compile Include="Interface\Base\IFirstPredicate.cs" />
+    <Compile Include="Interface\Base\ISqlClass.cs" />
+    <Compile Include="Interface\IBetweenPredicate.cs" />
+    <Compile Include="Interface\IFieldDatePredicate.cs" />
+    <Compile Include="Interface\IFieldDateTruncPredicate.cs" />
+    <Compile Include="Interface\IFieldPredicate.cs" />
+    <Compile Include="Interface\IPredicateGroup.cs" />
+    <Compile Include="Interface\IPropertyPredicate.cs" />
+    <Compile Include="Predicates.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="ReflectionHelper.cs" />
+    <Compile Include="Type\GroupOperationType.cs" />
+    <Compile Include="Type\MethodType.cs" />
+    <Compile Include="Type\OperatorType.cs" />
+    <Compile Include="Value\BetweenValues.cs" />
+    <Compile Include="Value\IsCodeValueClass.cs" />
+    <Compile Include="Value\IValueClass.cs" />
+    <Compile Include="Value\ValueClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
