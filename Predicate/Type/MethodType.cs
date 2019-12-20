@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Predicate
+namespace Predicate.Type
 {
-    class Program
+    public enum MethodType
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        Lower = 0,
+        Upper = 1,
     }
 }

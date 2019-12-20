@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Predicate
+namespace Predicate.Interface.Base
 {
-    class Program
+    public interface ISqlClass
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        string GetSql();
     }
 }

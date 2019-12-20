@@ -4,13 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Predicate
+namespace Predicate.Value
 {
-    class Program
+    public class ValueClass : IValueClass
     {
-        static void Main(string[] args)
+        public ValueClass(object val) : base(val)
         {
-            
         }
     }
 }

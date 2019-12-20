@@ -4,13 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Predicate
+namespace Predicate.Type
 {
-    class Program
+    public enum GroupOperatorType
     {
-        static void Main(string[] args)
-        {
-            
-        }
+        And = 0,
+        Or = 1
     }
 }
